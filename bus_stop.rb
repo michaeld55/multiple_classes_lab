@@ -1,6 +1,7 @@
 class BusStop
 
   attr_reader( :queue )
+
   def initialize()
 
       @queue = []
@@ -14,9 +15,8 @@ class BusStop
   end
 
   def empty_bus_stop()
+
     @queue = []
+
   end
-
-
-
 end
