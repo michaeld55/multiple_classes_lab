@@ -36,8 +36,10 @@ class TestBus < MiniTest::Test
     assert_equal(1, @bus1.passengers().size())
   end
 
-  def method_name
-
+  def test_drop_off_passenger()
+    @bus2.pick_up_passenger( @person1)
+    @bus2.drop_off_passenger( @person1)
+    assert_equal(0, @bus2.passengers().size() )
   end
 
 end
