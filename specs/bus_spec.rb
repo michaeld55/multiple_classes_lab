@@ -20,4 +20,8 @@ class TestBus < MiniTest::Test
     assert_equal("Granton", @bus2.destination)
   end
 
+  def test_bus_drive_method
+    assert_equal("Brum brum", @bus1.drive_method)
+  end
+
 end
