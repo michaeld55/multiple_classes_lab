@@ -19,7 +19,7 @@ class Bus
   end
 
   def pick_up_passenger( passenger )
-
+    # binding.pry
     return @passengers << passenger
 
   end
@@ -34,6 +34,14 @@ class Bus
 
     @passengers = []
 
+  end
+
+  def pick_up_from_stop( stop )
+
+    for passenger in stop.queue
+      pick_up_passenger( passenger)
+    end
+    stop.empty_bus_stop()
   end
 
 end
