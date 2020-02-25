@@ -37,9 +37,18 @@ class TestBus < MiniTest::Test
   end
 
   def test_drop_off_passenger()
-    @bus2.pick_up_passenger( @person1)
-    @bus2.drop_off_passenger( @person1)
+    @bus2.pick_up_passenger( @person1 )
+    @bus2.drop_off_passenger( @person1 )
     assert_equal(0, @bus2.passengers().size() )
+  end
+
+  def test_empty_bus()
+    @bus2.pick_up_passenger( @person1 )
+    @bus2.pick_up_passenger( @person1 )
+    @bus2.pick_up_passenger( @person1 )
+    @bus2.empty_bus()
+    assert_equal( 0, @bus2.passengers().size())
+
   end
 
 end

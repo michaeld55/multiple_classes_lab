@@ -30,4 +30,10 @@ class Bus
 
   end
 
+  def empty_bus()
+
+    @passengers = []
+
+  end
+
 end
