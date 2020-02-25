@@ -12,6 +12,12 @@ class Bus
     return "Brum brum"
   end
 
+  def current_passenger_count()
+
+    return @passengers.size()
+
+  end
+
   def pick_up_passenger( passenger )
 
     return @passengers << passenger

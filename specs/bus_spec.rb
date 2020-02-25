@@ -26,6 +26,11 @@ class TestBus < MiniTest::Test
     assert_equal("Brum brum", @bus1.drive_method)
   end
 
+  def test_current_passenger_count()
+
+    assert_equal( 0, @bus1.current_passenger_count())
+  end
+
   def test_pick_up_passenger()
       @bus1.pick_up_passenger( @person1)
     assert_equal(1, @bus1.passengers().size())
